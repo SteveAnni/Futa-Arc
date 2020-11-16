@@ -1,0 +1,1 @@
+web: gunicorn futa_arc.wsgi —-log-file -
