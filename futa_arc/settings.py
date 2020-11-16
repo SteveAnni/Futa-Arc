@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '%-$5d%i47nmo#05)(m18u_48w1gu1%sq($9p)75&5qp+oc0xaw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ADMINS = [
     ('Adegite Taiwo', 'adegitetaiwo24@gmail.com'),
