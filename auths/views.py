@@ -55,13 +55,16 @@ def register_or_login(request):
         }, status.HTTP_200_OK)
 
     else:
+        response_status = {
+            'status': 'Bad Request',
+            'status code': int(status.HTTP_400_BAD_REQUEST)
+        }
         serializer_errors = serializer.errors
-        serializer_errors['status'] = 'Bad Request'
-        serializer_errors['status code'] = status.HTTP_400_BAD_REQUEST
 
+        response_status.update(serializer_errors)
         # raise validations error
         raise serializers.ValidationError(
-            serializer_errors
+            response_status
         )
     
         
