@@ -8,7 +8,7 @@ class createUserSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         if User.objects.filter(username=attrs['username']).exists():
             raise serializers.ValidationError({
-                'username': 'Username already taken'
+                'username': 'Username is already taken'
             })
         elif attrs['password'] != attrs['confirm_password']:
             raise serializers.ValidationError({
