@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '%-$5d%i47nmo#05)(m18u_48w1gu1%sq($9p)75&5qp+oc0xaw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ADMINS = [
     ('Adegite Taiwo', 'adegitetaiwo24@gmail.com'),
@@ -134,6 +134,7 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",
+    "https://futa-arc.web.app/"
 ]
 
 
