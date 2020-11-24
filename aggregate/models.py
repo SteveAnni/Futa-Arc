@@ -7,7 +7,7 @@ class aggregateList(models.Model):
     username = models.OneToOneField(User, on_delete=models.CASCADE)
     jamb = models.PositiveIntegerField()
     post_utme = models.PositiveIntegerField()
-    aggregate = models.PositiveIntegerField()
+    aggregate = models.CharField(max_length=50)
     created = models.DateField(auto_now=False, auto_now_add=True)
 
     def __str__(self):

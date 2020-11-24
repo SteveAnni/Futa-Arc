@@ -13,7 +13,7 @@ def infomation(request):
     query = request.data or request.query_params
     try:
         queryset = infoModel.objects.all()[:int(query['q'])]
-    except KeyError:
+    except Exception as e:
         queryset = infoModel.objects.all()[:5]
 
     serializer = infoSerializer(queryset, many=True)
