@@ -4,6 +4,7 @@ from django.http import HttpResponse
 import csv
 # Register your models here.
 
+admin.site.site_header = 'Futa Arc'
 class ExportCsvMixin:
     def export_as_csv(self, request, queryset):
         meta = self.model._meta
@@ -25,3 +26,4 @@ class aggregateListAdmin(admin.ModelAdmin, ExportCsvMixin):
     list_display = ['username', 'jamb', 'post_utme', 'aggregate', 'created']
     list_filter = ['created']
     actions = ['export_as_csv']
+

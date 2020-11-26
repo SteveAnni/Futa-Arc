@@ -5,5 +5,4 @@ from .models import infoModel
 @admin.register(infoModel)
 class infoModelAdmin(admin.ModelAdmin):
     list_display = ['topic', 'created', 'updated']
-
-
+  

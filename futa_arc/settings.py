@@ -13,6 +13,18 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    dsn="https://240850461275402bab5e66913e223563@o420940.ingest.sentry.io/5534240",
+    integrations=[DjangoIntegration()],
+    traces_sample_rate=1.0,
+
+    # If you wish to associate users to errors (assuming you are using
+    # django.contrib.auth) you may enable sending PII data.
+    send_default_pii=True
+)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,9 +43,9 @@ ADMINS = [
     ('Adegite Taiwo', 'adegitetaiwo24@gmail.com'),
 ]
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['futaarc']
 
-
+DEBUG_PROPAGATE_EXCEPTIONS = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -134,7 +146,8 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",
-    "https://futa-arc.web.app/"
+    "https://futa-arc.web.app",
+    "http://127.0.0.1:8000"
 ]
 
 

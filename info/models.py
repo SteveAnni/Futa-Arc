@@ -15,16 +15,4 @@ class infoModel(models.Model):
     class Meta:
         verbose_name_plural = 'Information'
 
-class aggregateList(models.Model):
-    username = models.CharField(max_length=50)
-    jamb = models.PositiveIntegerField()
-    post_utme = models.PositiveIntegerField()
-    aggregate = models.PositiveIntegerField()
-    created = models.DateField(auto_now=False, auto_now_add=True)
-
-    def __str__(self):
-        return self.username
-    class Meta:
-        verbose_name_plural = 'Aggregate Table'
-    
 
