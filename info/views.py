@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import infoModel
+from .models import infoModelClass
 from .serializers import infoSerializer
 
 from rest_framework import status

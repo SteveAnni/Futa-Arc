@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class infoModel(models.Model):
+class infoModelClass(models.Model):
     topic = models.CharField(max_length=80)
     info = models.TextField()
     created = models.DateField(auto_now=False, auto_now_add=True)

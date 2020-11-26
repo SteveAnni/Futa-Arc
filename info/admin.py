@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import infoModel
+from .models import infoModelClass
 
 # Register your models here.
-@admin.register(infoModel)
-class infoModelAdmin(admin.ModelAdmin):
+@admin.register(infoModelClass)
+class infoModelClassAdmin(admin.ModelAdmin):
     list_display = ['topic', 'created', 'updated']
   

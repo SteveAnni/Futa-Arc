@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from .models import infoModel
+from .models import infoModelClass
 class infoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = infoModel
+        model = infoModelClass
         fields = '__all__'
