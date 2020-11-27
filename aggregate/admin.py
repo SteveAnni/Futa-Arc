@@ -23,7 +23,7 @@ class ExportCsvMixin:
 
 @admin.register(aggregateList)
 class aggregateListAdmin(admin.ModelAdmin, ExportCsvMixin):
-    list_display = ['username', 'jamb', 'post_utme', 'aggregate', 'created']
+    list_display = ['username', 'course','jamb', 'post_utme', 'aggregate', 'created']
     list_filter = ['created']
     actions = ['export_as_csv']
 

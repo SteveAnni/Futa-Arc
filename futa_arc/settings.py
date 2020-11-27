@@ -45,7 +45,7 @@ ADMINS = [
 
 ALLOWED_HOSTS = ['futaarc']
 
-DEBUG_PROPAGATE_EXCEPTIONS = True
+# DEBUG_PROPAGATE_EXCEPTIONS = True
 # Application definition
 
 INSTALLED_APPS = [

@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 class aggregateList(models.Model):
     username = models.OneToOneField(User, on_delete=models.CASCADE)
+    course = models.CharField(max_length=50, blank=True)
     jamb = models.PositiveIntegerField()
     post_utme = models.PositiveIntegerField()
     aggregate = models.CharField(max_length=50)

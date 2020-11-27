@@ -14,6 +14,8 @@ def aggregate_list(request):
     data = request.data or request.query_params
     data_copy = data.copy()
     data_copy['username'] = request.user
+    data_copy['course'] = request.user.profile.course
+
     serializer = aggregateListSerializer(data=data_copy)
 
     if serializer.is_valid():
@@ -32,6 +34,8 @@ def get_aggregate_list(request):
     queryset = aggregateList.objects.all()
     serializer = aggregateListSerializer(queryset, many=True)
 
+    data = serializer.data
+    # data['course'] = 
     return Response({
-        'queryset': serializer.data
+        'queryset': data
     }, status=status.HTTP_200_OK)

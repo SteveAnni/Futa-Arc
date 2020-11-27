@@ -10,6 +10,8 @@ from rest_framework.decorators import api_view
 
 from rest_framework.authtoken.models import Token
 
+from .models import Profile
+
 # Create your views here.
 @api_view(['GET'])
 def current_user(request):
