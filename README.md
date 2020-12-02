@@ -3,8 +3,11 @@ Futa Arc is a Django REST API built with Django + Django REST framework. This AP
 
 # end points
 ### auths
+##### register
 🚩 https://futaarc.herokuapp.com/api/auth/register/ (POST)
+##### login
 🚩 https://futaarc.herokuapp.com/api/auth/login/ (POST)
+##### logout
 🚩 https://futaarc.herokuapp.com/api/auth/logout/ (POST)
 
 ### aggregate
