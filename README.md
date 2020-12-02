@@ -7,7 +7,7 @@ Futa Arc is a Django REST API built with Django + Django REST framework. This AP
 🚩 https://futaarc.herokuapp.com/api/auth/register/ (POST)
 #
 👉 required fields
-**username
+* username
 **course
 **password
 **confirm_password
