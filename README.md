@@ -24,6 +24,7 @@ Futa Arc is a Django REST API built with Django + Django REST framework. This AP
 🚩 https://futaarc.herokuapp.com/api/add-aggregate-list/ (POST)
 👉 optional param
 * q=5
+#
 🚩 https://futaarc.herokuapp.com/api/get-aggregate-list/ (GET)
 
 ### information
